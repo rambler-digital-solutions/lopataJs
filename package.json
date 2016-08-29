@@ -1,11 +1,25 @@
 {
   "name": "lopataJs",
   "version": "0.0.1",
-  "description": "== README",
-  "author": "Rambler",
+  "description": "Collection of crutches for fast frontend development",
+  "keywords": [
+    "cookie",
+    "extend",
+    "ajax",
+    "height",
+    "jsonp"
+  ],
+  "author": "Rambler Digital Solutions",
   "license": "ISC",
   "devDependencies": {
     "eslint-config-rambler": "0.2.2"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rambler-digital-solutions/lopataJs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rambler-digital-solutions/lopataJs/issues"
+  }
 }
