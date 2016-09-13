@@ -2,6 +2,7 @@
 [![Build Status](https://api.travis-ci.org/rambler-digital-solutions/lopataJs.svg)](https://travis-ci.org/rambler-digital-solutions/lopataJs)
 [![Dependency Status](https://gemnasium.com/badges/github.com/rambler-digital-solutions/lopataJs.svg)](https://gemnasium.com/github.com/rambler-digital-solutions/lopataJs)
 [![Coverage Status](https://coveralls.io/repos/github/rambler-digital-solutions/lopataJs/badge.svg?branch=master)](https://coveralls.io/github/rambler-digital-solutions/lopataJs?branch=master)
+[![Code Climate](https://codeclimate.com/github/rambler-digital-solutions/lopataJs/badges/gpa.svg)](https://codeclimate.com/github/rambler-digital-solutions/lopataJs)
 
 Various tools for jqueryless development.
 
