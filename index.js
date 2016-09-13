@@ -1,6 +1,6 @@
 module.exports = {
   getCookie: function(name) {
-    let matches = document.cookie.match(new RegExp(
+    var matches = document.cookie.match(new RegExp(
       '(?:^|; )' + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + '=([^;]*)'
     ));
     return matches ? decodeURIComponent(matches[1]) : undefined;
@@ -41,7 +41,7 @@ module.exports = {
   },
   extend: function(obj1, obj2) {
     var extended = {};
-    var merge = function(obj, cb) {
+    var merge = function(obj) {
       var keys = Object.keys(obj);
       var keysLength = keys.length;
       var i = 0;
@@ -49,7 +49,6 @@ module.exports = {
         var key = keys[i];
         extended[key] = obj[key];
       }
-      if (typeof cb === 'function') cb();
     };
     merge(obj1);
     merge(obj2);
@@ -70,7 +69,8 @@ module.exports = {
       return obj instanceof HTMLElement;
     } catch (e) {
       return (typeof obj === 'object') &&
-        (obj.nodeType === 1) && (typeof obj.style === 'object') &&
+        (obj.nodeType === 1) &&
+        (typeof obj.style === 'object') &&
         (typeof obj.ownerDocument === 'object');
     }
   },
@@ -97,10 +97,7 @@ module.exports = {
     xhr.onreadystatechange = function() {
       // TODO: check data type!
       if (xhr.readyState === 4 && xhr.status === 200) {
-        // TODO: make cross browser implementation
-        var response = document.implementation.createHTMLDocument('');
-        response.body.innerHTML = xhr.responseText;
-        if (typeof success === 'function') success(response);
+        if (typeof success === 'function') success(xhr.responseText);
       } else if (xhr.readyState === 4) {
         if (typeof failure === 'function') failure();
       }
